@@ -1,0 +1,9 @@
+
+//      GARDEN ITEMS
+
+
+
+Group garden_group "Garden" (maintenance_group)
+
+    // Lighting
+    Switch garden_lights "Garden Lights" (garden_group) { channel="mqtt:topic:home:pool:garden_lights", autoupdate="false" }
