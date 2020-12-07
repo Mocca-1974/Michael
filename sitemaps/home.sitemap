@@ -1,0 +1,33 @@
+//This is the SitemapsFile
+sitemap home label="Michael's-Smarthome" {
+
+    Frame label="Water Features" {
+        Group item=pool_deckjets_group icon="flow"
+        Switch item=pool_deckjets_group label="All Jets"
+        Switch item=pool_waterfall label="Waterfall"  icon="landscape_waterfall"
+    }
+
+    Frame label="Pumps"{
+        Switch item=pool_waterpump label="Water Pump" icon="faucet"
+        Switch item=pool_air_pump label="Air Pump" icon="pump"
+        Switch item=pool_acidinject mappings=[ON="INJECT"] icon="pump"
+    }
+
+    Frame label="Tempreture sensors" {
+        Group item=pool_temp_group      icon="temperature"
+            Text item=pool_temp_water_out   icon="temperature"
+        Group item=air_temp_group       icon="temperature_hot"
+            Text item=temp_outside          icon="temperature"
+    }
+
+    Frame label="Controls"	{
+        Switch item=pool_pit_state mappings=["close"="CLOSE", "stop"="STOP", "open"="OPEN"]
+        Switch item=pool_umbrella label="Awning" mappings=["close"="CLOSE", "stop"="STOP", "open"="OPEN"]
+    }
+/*
+    Frame label="Umbrella" {
+        Switch item=pool_umbrella_relay_up label="Umbrella UP"  mappings=[ON="UP", OFF="Stop"]  icon="sun"
+        Switch item=pool_umbrella_relay_down label="Umbrella DOWN"  mappings=[ON="DOWN", OFF="Stop"] icon= "sun_clouds"
+    }
+*/
+}

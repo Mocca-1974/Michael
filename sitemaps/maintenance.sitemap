@@ -1,0 +1,4 @@
+
+sitemap maintenance label="Maintenance" {
+    Group item=maintenance_group
+}
